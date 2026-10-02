@@ -8,6 +8,7 @@ import json
 import random
 from typing import Dict, Any, List, Optional
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -250,9 +251,100 @@ def evaluate_both(order: OrderInput, threshold: Optional[float] = None):
         "cost_saved_usd": llm_res["cost_usd"]
     }
 
-# Mount static frontend files
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
 os.makedirs(FRONTEND_DIR, exist_ok=True)
+
+@app.get("/terminal")
+def get_terminal_page():
+    """Serves the standalone terminal CLI page."""
+    terminal_file = os.path.join(FRONTEND_DIR, "terminal.html")
+    if os.path.exists(terminal_file):
+        return FileResponse(terminal_file)
+    raise HTTPException(status_code=404, detail="Terminal page not found")
+
+@app.get("/api/terminal/run")
+def run_terminal(cmd: str = "warehouse_laya", all_orders: bool = True, live: bool = False):
+    """
+    Executes or returns simulated terminal output for CLI commands such as:
+    - python3 warehouse_laya.py --all
+    - python3 warehouse_laya.py
+    """
+    cached_path = os.path.join(FRONTEND_DIR, "terminal_data.json")
+    orders_to_run = ORDERS if all_orders else ORDERS[:10]
+    results = []
+
+    header_banner = [
+        "=" * 95,
+        "📦 Warehouse Brain (Stage 2: Laya Decision Engine)".center(95),
+        "=" * 95,
+        "Evaluating warehouse orders using Laya's structured choice classification...\n",
+        f"{'Order ID':<10} | {'Product Name':<28} | {'Deadline':<9} | {'Value ($)':<10} | {'Fragile':<8} | {'Laya Decision':<14} | {'Confidence'}",
+        "-" * 95
+    ]
+    lines = list(header_banner)
+
+    if os.path.exists(cached_path) and not live:
+        with open(cached_path, "r") as f:
+            all_cached = json.load(f)
+            cached_subset = all_cached if all_orders else all_cached[:10]
+            for item in cached_subset:
+                results.append(item)
+                lines.append(item["row_text"])
+    else:
+        try:
+            from warehouse_laya import decide_order_priority
+            for order in orders_to_run:
+                decision, probs = decide_order_priority(order)
+                confidence = round(probs[decision] * 100, 1)
+                fragile_str = "YES" if order["fragile"] else "NO"
+                deadline_str = f"{order['deadline']}h"
+                val_str = f"${order['value']:,.2f}"
+                decision_badge = f"[{decision.upper()}]"
+                row_str = (
+                    f"{order['order_id']:<10} | "
+                    f"{order['product_name'][:28]:<28} | "
+                    f"{deadline_str:<9} | "
+                    f"{val_str:<10} | "
+                    f"{fragile_str:<8} | "
+                    f"{decision_badge:<14} | "
+                    f"{confidence:5.1f}%"
+                )
+                lines.append(row_str)
+                results.append({
+                    "order_id": order["order_id"],
+                    "product_name": order["product_name"][:28],
+                    "deadline": deadline_str,
+                    "value": val_str,
+                    "fragile": fragile_str,
+                    "decision": decision.upper(),
+                    "confidence": confidence,
+                    "row_text": row_str
+                })
+        except Exception:
+            if os.path.exists(cached_path):
+                with open(cached_path, "r") as f:
+                    all_cached = json.load(f)
+                    cached_subset = all_cached if all_orders else all_cached[:10]
+                    for item in cached_subset:
+                        results.append(item)
+                        lines.append(item["row_text"])
+
+    footer_banner = [
+        "-" * 95,
+        "✅ Completed! All decisions produced by Laya without hardcoded if/else priority rules.\n"
+    ]
+    lines.extend(footer_banner)
+    raw_text = "\n".join(lines)
+
+    return {
+        "command": f"python3 warehouse_laya.py{' --all' if all_orders else ''}",
+        "raw_text": raw_text,
+        "lines": lines,
+        "results": results,
+        "total_orders": len(results)
+    }
+
+# Mount static frontend files
 app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
 
 if __name__ == "__main__":

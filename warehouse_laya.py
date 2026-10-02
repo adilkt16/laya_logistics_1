@@ -4,6 +4,7 @@
 # In this stage, we replace manual if/else priority rules with ONE Laya decision:
 # "How urgently should this order be processed?" -> ('low', 'medium', 'high')
 
+import sys
 from laya import Router
 from orders_data import ORDERS
 
@@ -81,8 +82,9 @@ def main():
     print(header)
     print("-" * 95)
 
-    # Process first 10 orders to keep CLI clear and immediate
-    for order in ORDERS[:10]:
+    # Process all orders if --all is passed, otherwise first 10
+    sample_orders = ORDERS if "--all" in sys.argv else ORDERS[:10]
+    for order in sample_orders:
         decision, probs = decide_order_priority(order)
         confidence = probs[decision] * 100
 

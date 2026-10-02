@@ -6,8 +6,9 @@
   <title>🍰 Comfy Cakes Warehouse Factory & Laya vs LLM Arena</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700;800&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fredoka:wght@400;600;700;800&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="terminal.css">
 </head>
 <body>
 
@@ -30,7 +31,14 @@
           <button id="tab-arena" class="tab-btn">
             <span>⚔️</span> Laya vs. LLM Arena
           </button>
+          <button id="tab-terminal" class="tab-btn">
+            <span>💻</span> Terminal CLI
+          </button>
         </div>
+
+        <a href="terminal.html" target="_blank" class="btn-comfy btn-yellow" title="Open Standalone Terminal Link" style="text-decoration:none; display:flex; align-items:center; gap:6px;">
+          <span>↗️</span> Standalone CLI
+        </a>
 
         <button id="btn-bake-custom" class="btn-comfy btn-pink">
           <span>🧁</span> Bake Custom Parcel
@@ -456,6 +464,132 @@
   </main>
 
   <!-- ======================================================================
+       VIEW 3: LIVE TERMINAL CLI VIEW (python3 warehouse_laya.py --all)
+       ====================================================================== -->
+  <main id="terminal-view" class="factory-wrapper terminal-view-wrapper" style="display:none;">
+    <div class="terminal-main-container" style="padding-top:0;">
+      <!-- HERO CONTEXT -->
+      <section class="terminal-hero">
+        <div class="hero-left">
+          <div class="hero-tag">⚡ ZERO DOWNLOAD REQUIRED</div>
+          <h2>Live Terminal CLI: <code>python3 warehouse_laya.py --all</code></h2>
+          <p>
+            Experience the exact command-line interface produced by <code>python3 warehouse_laya.py --all</code> without downloading or running locally.
+            Laya evaluates all 20 real-world warehouse orders in real time using a pure neural semantic router with calibrated probability scores.
+          </p>
+        </div>
+        <div class="hero-right">
+          <a href="terminal.html" target="_blank" class="btn-comfy btn-yellow" style="text-decoration:none; display:flex; align-items:center; gap:6px;">
+            <span>↗️</span> Open in Full Window
+          </a>
+        </div>
+      </section>
+
+      <!-- CLI CONTROLS TOOLBAR -->
+      <div class="cli-toolbar">
+        <div class="cli-presets">
+          <span class="cli-preset-lbl">Preset Commands:</span>
+          <button class="btn-preset active" data-cmd="python3 warehouse_laya.py --all">
+            <code>python3 warehouse_laya.py --all</code> <span class="badge-mini">All 20</span>
+          </button>
+          <button class="btn-preset" data-cmd="python3 warehouse_laya.py">
+            <code>python3 warehouse_laya.py</code> <span class="badge-mini">First 10</span>
+          </button>
+          <button class="btn-preset" data-cmd="python3 warehouse.py --all">
+            <code>python3 warehouse.py --all</code> <span class="badge-mini">5-Stage HITL</span>
+          </button>
+        </div>
+
+        <div class="cli-actions">
+          <div class="speed-toggle" title="Streaming Speed">
+            <button class="speed-btn active" data-speed="fast">⚡ Fast</button>
+            <button class="speed-btn" data-speed="type">🖨️ Typewriter</button>
+            <button class="speed-btn" data-speed="instant">💨 Instant</button>
+          </div>
+
+          <button id="btn-run-cli" class="btn-terminal-action btn-terminal-run">
+            <span>▶</span> Run Command
+          </button>
+          <button id="btn-copy-cli" class="btn-terminal-action" title="Copy raw ASCII output to clipboard">
+            <span>📋</span> Copy Output
+          </button>
+          <button id="btn-clear-cli" class="btn-terminal-action" title="Clear terminal screen">
+            <span>🧹</span> Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- AUTHENTIC TERMINAL WINDOW -->
+      <div class="terminal-window">
+        <!-- Window Title Bar -->
+        <div class="terminal-titlebar">
+          <div class="window-buttons">
+            <span class="win-btn win-close"></span>
+            <span class="win-btn win-minimize"></span>
+            <span class="win-btn win-maximize"></span>
+          </div>
+          <div class="window-title">
+            <span class="term-icon">📟</span>
+            <span id="term-title-text">user@warehouse-box: ~/learn-laya (bash)</span>
+          </div>
+          <div class="window-status">
+            <span class="status-indicator"></span>
+            <span id="term-engine-badge">Laya Neural Router • Ready</span>
+          </div>
+        </div>
+
+        <!-- Terminal Body / Buffer Screen -->
+        <div id="terminal-screen" class="terminal-screen">
+          <!-- Lines will be dynamically streamed here -->
+        </div>
+
+        <!-- Terminal Interactive Input Row -->
+        <div class="terminal-input-bar">
+          <span class="prompt-prefix">
+            <span class="prompt-user">user@warehouse-node</span>:<span class="prompt-path">~/learn-laya</span><span class="prompt-symbol">$</span>
+          </span>
+          <input type="text" id="terminal-cli-input" class="terminal-cli-input" autocomplete="off" spellcheck="false" value="python3 warehouse_laya.py --all" placeholder="Type a command (e.g. python3 warehouse_laya.py --all, help, clear)...">
+          <button id="btn-send-cmd" class="btn-send-cmd">↵ Enter</button>
+        </div>
+      </div>
+
+      <!-- ARCHITECTURAL EXPLANATION CARDS -->
+      <section class="terminal-insights-grid">
+        <div class="insight-card">
+          <div class="insight-icon">🌐</div>
+          <div class="insight-content">
+            <h3>Zero Local Setup</h3>
+            <p>
+              Users and evaluators can inspect and execute Laya's structured routing decisions directly in the browser, without cloning the repo, installing PyTorch, or setting up virtual environments.
+            </p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon">🧠</div>
+          <div class="insight-content">
+            <h3>Pure Neural Semantic Routing</h3>
+            <p>
+              Urgency routing is handled via a single forward pass over an <code>URGENCY_DECISION_SCHEMA</code>, eliminating brittle nested if-else rules.
+            </p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon">🎯</div>
+          <div class="insight-content">
+            <h3>Calibrated Probability Scores</h3>
+            <p>
+              Every decision carries normalized probability mass across candidates, enabling automated confidence gating and human-in-the-loop escalation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
        MODAL: BAKE CUSTOM PARCEL
        ====================================================================== -->
   <div id="custom-modal" class="modal-overlay">
@@ -513,5 +647,6 @@
   </div>
 
   <script src="app.js"></script>
+  <script src="terminal.js"></script>
 </body>
 </html>

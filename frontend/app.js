@@ -141,6 +141,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateMetricsDisplay();
   logAudit("🎂 Welcome to the Comfy Cakes Warehouse Brain Factory!");
   logAudit("⚡ Laya Neural Decision Engine connected & online.");
+
+  // Handle hash routing on initial page load
+  if (window.location.hash === '#terminal') {
+    switchTab('terminal');
+  } else if (window.location.hash === '#arena') {
+    switchTab('arena');
+  }
+
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#terminal') switchTab('terminal');
+    else if (window.location.hash === '#arena') switchTab('arena');
+    else if (window.location.hash === '#factory' || !window.location.hash) switchTab('factory');
+  });
 });
 
 async function loadOrders() {
@@ -161,6 +174,10 @@ function setupEventListeners() {
   // Tabs
   document.getElementById('tab-factory').addEventListener('click', () => switchTab('factory'));
   document.getElementById('tab-arena').addEventListener('click', () => switchTab('arena'));
+  const tabTerminal = document.getElementById('tab-terminal');
+  if (tabTerminal) {
+    tabTerminal.addEventListener('click', () => switchTab('terminal'));
+  }
 
   // Sound toggle
   const soundBtn = document.getElementById('btn-sound');
@@ -231,17 +248,20 @@ function setupEventListeners() {
 function switchTab(tab) {
   state.activeTab = tab;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(`tab-${tab}`).classList.add('active');
+  const targetTab = document.getElementById(`tab-${tab}`);
+  if (targetTab) targetTab.classList.add('active');
 
   const factoryView = document.getElementById('factory-view');
   const arenaView = document.getElementById('arena-view');
+  const terminalView = document.getElementById('terminal-view');
 
-  if (tab === 'factory') {
-    factoryView.style.display = 'block';
-    arenaView.classList.remove('active');
-  } else {
-    factoryView.style.display = 'none';
-    arenaView.classList.add('active');
+  if (factoryView) factoryView.style.display = (tab === 'factory') ? 'block' : 'none';
+  if (arenaView) {
+    if (tab === 'arena') arenaView.classList.add('active');
+    else arenaView.classList.remove('active');
+  }
+  if (terminalView) {
+    terminalView.style.display = (tab === 'terminal') ? 'block' : 'none';
   }
 }
 
