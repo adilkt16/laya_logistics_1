@@ -1,0 +1,202 @@
+[
+  {
+    "order_id": "ORD-001",
+    "product_name": "Surgical Bone Drills",
+    "deadline": "2h",
+    "value": "$3,500.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 87.7,
+    "row_text": "ORD-001    | Surgical Bone Drills         | 2h        | $3,500.00  | YES      | [HIGH]         |  87.7%"
+  },
+  {
+    "order_id": "ORD-002",
+    "product_name": "Ceramic Dinner Plates Set",
+    "deadline": "24h",
+    "value": "$120.00",
+    "fragile": "YES",
+    "decision": "MEDIUM",
+    "confidence": 74.0,
+    "row_text": "ORD-002    | Ceramic Dinner Plates Set    | 24h       | $120.00    | YES      | [MEDIUM]       |  74.0%"
+  },
+  {
+    "order_id": "ORD-003",
+    "product_name": "Industrial Hex Bolts (Box of",
+    "deadline": "48h",
+    "value": "$65.00",
+    "fragile": "NO",
+    "decision": "LOW",
+    "confidence": 50.1,
+    "row_text": "ORD-003    | Industrial Hex Bolts (Box of | 48h       | $65.00     | NO       | [LOW]          |  50.1%"
+  },
+  {
+    "order_id": "ORD-004",
+    "product_name": "High-End Gaming Laptop",
+    "deadline": "6h",
+    "value": "$2,400.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 89.9,
+    "row_text": "ORD-004    | High-End Gaming Laptop       | 6h        | $2,400.00  | YES      | [HIGH]         |  89.9%"
+  },
+  {
+    "order_id": "ORD-005",
+    "product_name": "Organic Cotton T-Shirts",
+    "deadline": "36h",
+    "value": "$45.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 47.8,
+    "row_text": "ORD-005    | Organic Cotton T-Shirts      | 36h       | $45.00     | NO       | [MEDIUM]       |  47.8%"
+  },
+  {
+    "order_id": "ORD-006",
+    "product_name": "Laboratory Glass Beakers",
+    "deadline": "4h",
+    "value": "$420.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 89.3,
+    "row_text": "ORD-006    | Laboratory Glass Beakers     | 4h        | $420.00    | YES      | [HIGH]         |  89.3%"
+  },
+  {
+    "order_id": "ORD-007",
+    "product_name": "Smartphone OLED Screens",
+    "deadline": "5h",
+    "value": "$5,200.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 89.7,
+    "row_text": "ORD-007    | Smartphone OLED Screens      | 5h        | $5,200.00  | YES      | [HIGH]         |  89.7%"
+  },
+  {
+    "order_id": "ORD-008",
+    "product_name": "Cast Iron Dumbbell Set",
+    "deadline": "72h",
+    "value": "$110.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 46.2,
+    "row_text": "ORD-008    | Cast Iron Dumbbell Set       | 72h       | $110.00    | NO       | [MEDIUM]       |  46.2%"
+  },
+  {
+    "order_id": "ORD-009",
+    "product_name": "Insulin Cold-Storage Cooler",
+    "deadline": "3h",
+    "value": "$1,800.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 88.5,
+    "row_text": "ORD-009    | Insulin Cold-Storage Cooler  | 3h        | $1,800.00  | YES      | [HIGH]         |  88.5%"
+  },
+  {
+    "order_id": "ORD-010",
+    "product_name": "Wireless Mechanical Keyboard",
+    "deadline": "28h",
+    "value": "$160.00",
+    "fragile": "NO",
+    "decision": "LOW",
+    "confidence": 45.9,
+    "row_text": "ORD-010    | Wireless Mechanical Keyboard | 28h       | $160.00    | NO       | [LOW]          |  45.9%"
+  },
+  {
+    "order_id": "ORD-011",
+    "product_name": "Vintage Vinyl Records",
+    "deadline": "18h",
+    "value": "$310.00",
+    "fragile": "YES",
+    "decision": "MEDIUM",
+    "confidence": 78.0,
+    "row_text": "ORD-011    | Vintage Vinyl Records        | 18h       | $310.00    | YES      | [MEDIUM]       |  78.0%"
+  },
+  {
+    "order_id": "ORD-012",
+    "product_name": "Automotive Car Batteries",
+    "deadline": "12h",
+    "value": "$380.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 80.4,
+    "row_text": "ORD-012    | Automotive Car Batteries     | 12h       | $380.00    | NO       | [MEDIUM]       |  80.4%"
+  },
+  {
+    "order_id": "ORD-013",
+    "product_name": "Luxury Silk Scarves",
+    "deadline": "8h",
+    "value": "$850.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 80.6,
+    "row_text": "ORD-013    | Luxury Silk Scarves          | 8h        | $850.00    | NO       | [MEDIUM]       |  80.6%"
+  },
+  {
+    "order_id": "ORD-014",
+    "product_name": "Bulk Garden Soil Bags",
+    "deadline": "60h",
+    "value": "$35.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 47.0,
+    "row_text": "ORD-014    | Bulk Garden Soil Bags        | 60h       | $35.00     | NO       | [MEDIUM]       |  47.0%"
+  },
+  {
+    "order_id": "ORD-015",
+    "product_name": "Drone 4K Camera Gimbal",
+    "deadline": "7h",
+    "value": "$1,150.00",
+    "fragile": "YES",
+    "decision": "MEDIUM",
+    "confidence": 83.9,
+    "row_text": "ORD-015    | Drone 4K Camera Gimbal       | 7h        | $1,150.00  | YES      | [MEDIUM]       |  83.9%"
+  },
+  {
+    "order_id": "ORD-016",
+    "product_name": "Hardcover Programming Books",
+    "deadline": "40h",
+    "value": "$180.00",
+    "fragile": "NO",
+    "decision": "MEDIUM",
+    "confidence": 50.7,
+    "row_text": "ORD-016    | Hardcover Programming Books  | 40h       | $180.00    | NO       | [MEDIUM]       |  50.7%"
+  },
+  {
+    "order_id": "ORD-017",
+    "product_name": "Emergency Backup Generator",
+    "deadline": "5h",
+    "value": "$2,900.00",
+    "fragile": "NO",
+    "decision": "HIGH",
+    "confidence": 91.2,
+    "row_text": "ORD-017    | Emergency Backup Generator   | 5h        | $2,900.00  | NO       | [HIGH]         |  91.2%"
+  },
+  {
+    "order_id": "ORD-018",
+    "product_name": "Fine Wine Wooden Crate",
+    "deadline": "14h",
+    "value": "$750.00",
+    "fragile": "YES",
+    "decision": "MEDIUM",
+    "confidence": 82.7,
+    "row_text": "ORD-018    | Fine Wine Wooden Crate       | 14h       | $750.00    | YES      | [MEDIUM]       |  82.7%"
+  },
+  {
+    "order_id": "ORD-019",
+    "product_name": "Stainless Steel Kitchen Uten",
+    "deadline": "30h",
+    "value": "$70.00",
+    "fragile": "NO",
+    "decision": "LOW",
+    "confidence": 57.0,
+    "row_text": "ORD-019    | Stainless Steel Kitchen Uten | 30h       | $70.00     | NO       | [LOW]          |  57.0%"
+  },
+  {
+    "order_id": "ORD-020",
+    "product_name": "Optics Calibration Laser",
+    "deadline": "3h",
+    "value": "$6,800.00",
+    "fragile": "YES",
+    "decision": "HIGH",
+    "confidence": 89.3,
+    "row_text": "ORD-020    | Optics Calibration Laser     | 3h        | $6,800.00  | YES      | [HIGH]         |  89.3%"
+  }
+]

@@ -3,8 +3,7 @@ title: Cakes Warehouse
 emoji: 🍰
 colorFrom: pink
 colorTo: red
-sdk: docker
-app_port: 7860
+sdk: static
 pinned: false
 ---
 

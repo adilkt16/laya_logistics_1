@@ -1,0 +1,691 @@
+[
+  {
+    "order_id": "ORD-001",
+    "product_name": "Surgical Bone Drills",
+    "destination": "Hospital Central, Chicago",
+    "deadline": 2,
+    "weight": 4.5,
+    "fragile": true,
+    "value": 3500.0,
+    "quantity": 2,
+    "priority": "HIGH",
+    "priority_confidence": 0.969,
+    "lane": "HIGH_VALUE",
+    "lane_confidence": 0.9064,
+    "needs_human_review": true,
+    "review_confidence": 0.8252,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.83)"
+    ],
+    "min_confidence": 0.8252,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.969,
+        "medium": 0.0177,
+        "low": 0.0133
+      },
+      "lane": {
+        "standard": 0.0516,
+        "fragile": 0.042,
+        "high_value": 0.9064
+      },
+      "review_p_true": 0.8252
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-002",
+    "product_name": "Ceramic Dinner Plates Set",
+    "destination": "Austin, TX",
+    "deadline": 24,
+    "weight": 8.2,
+    "fragile": true,
+    "value": 120.0,
+    "quantity": 1,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8222,
+    "lane": "FRAGILE",
+    "lane_confidence": 0.6378,
+    "needs_human_review": false,
+    "review_confidence": 0.621,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Priority 'MEDIUM' at 0.82 < 0.85 threshold",
+      "Low Confidence: Handling Lane 'FRAGILE' at 0.64 < 0.85 threshold"
+    ],
+    "min_confidence": 0.621,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0682,
+        "medium": 0.8222,
+        "low": 0.1096
+      },
+      "lane": {
+        "standard": 0.2783,
+        "fragile": 0.6378,
+        "high_value": 0.0839
+      },
+      "review_p_true": 0.379
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-003",
+    "product_name": "Industrial Hex Bolts (Box of 500)",
+    "destination": "Detroit, MI",
+    "deadline": 48,
+    "weight": 25.0,
+    "fragile": false,
+    "value": 65.0,
+    "quantity": 4,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8732,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9285,
+    "needs_human_review": false,
+    "review_confidence": 0.5337000000000001,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.5337000000000001,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0502,
+        "medium": 0.8732,
+        "low": 0.0766
+      },
+      "lane": {
+        "standard": 0.9285,
+        "fragile": 0.0266,
+        "high_value": 0.0449
+      },
+      "review_p_true": 0.4663
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-004",
+    "product_name": "High-End Gaming Laptop",
+    "destination": "Seattle, WA",
+    "deadline": 6,
+    "weight": 3.1,
+    "fragile": true,
+    "value": 2400.0,
+    "quantity": 1,
+    "priority": "HIGH",
+    "priority_confidence": 0.971,
+    "lane": "HIGH_VALUE",
+    "lane_confidence": 0.9006,
+    "needs_human_review": true,
+    "review_confidence": 0.7249,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.72)"
+    ],
+    "min_confidence": 0.7249,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.971,
+        "medium": 0.0169,
+        "low": 0.0121
+      },
+      "lane": {
+        "standard": 0.0468,
+        "fragile": 0.0526,
+        "high_value": 0.9006
+      },
+      "review_p_true": 0.7249
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-005",
+    "product_name": "Organic Cotton T-Shirts",
+    "destination": "Brooklyn, NY",
+    "deadline": 36,
+    "weight": 1.2,
+    "fragile": false,
+    "value": 45.0,
+    "quantity": 3,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8504,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9247,
+    "needs_human_review": false,
+    "review_confidence": 0.6889000000000001,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.6889000000000001,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0403,
+        "medium": 0.8504,
+        "low": 0.1093
+      },
+      "lane": {
+        "standard": 0.9247,
+        "fragile": 0.0308,
+        "high_value": 0.0445
+      },
+      "review_p_true": 0.3111
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-006",
+    "product_name": "Laboratory Glass Beakers",
+    "destination": "Cambridge, MA",
+    "deadline": 4,
+    "weight": 2.8,
+    "fragile": true,
+    "value": 420.0,
+    "quantity": 6,
+    "priority": "HIGH",
+    "priority_confidence": 0.9443,
+    "lane": "FRAGILE",
+    "lane_confidence": 0.7141,
+    "needs_human_review": true,
+    "review_confidence": 0.605,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.60)",
+      "Low Confidence: Handling Lane 'FRAGILE' at 0.71 < 0.85 threshold"
+    ],
+    "min_confidence": 0.605,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.9443,
+        "medium": 0.0278,
+        "low": 0.0279
+      },
+      "lane": {
+        "standard": 0.1728,
+        "fragile": 0.7141,
+        "high_value": 0.1132
+      },
+      "review_p_true": 0.605
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-007",
+    "product_name": "Smartphone OLED Screens",
+    "destination": "San Jose, CA",
+    "deadline": 5,
+    "weight": 1.5,
+    "fragile": true,
+    "value": 5200.0,
+    "quantity": 10,
+    "priority": "HIGH",
+    "priority_confidence": 0.9672,
+    "lane": "HIGH_VALUE",
+    "lane_confidence": 0.8848,
+    "needs_human_review": true,
+    "review_confidence": 0.7695,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.77)"
+    ],
+    "min_confidence": 0.7695,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.9672,
+        "medium": 0.0185,
+        "low": 0.0143
+      },
+      "lane": {
+        "standard": 0.0583,
+        "fragile": 0.0569,
+        "high_value": 0.8848
+      },
+      "review_p_true": 0.7695
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-008",
+    "product_name": "Cast Iron Dumbbell Set",
+    "destination": "Denver, CO",
+    "deadline": 72,
+    "weight": 40.0,
+    "fragile": false,
+    "value": 110.0,
+    "quantity": 2,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8535,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9391,
+    "needs_human_review": false,
+    "review_confidence": 0.7089,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.7089,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0547,
+        "medium": 0.8535,
+        "low": 0.0917
+      },
+      "lane": {
+        "standard": 0.9391,
+        "fragile": 0.0238,
+        "high_value": 0.0371
+      },
+      "review_p_true": 0.2911
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-009",
+    "product_name": "Insulin Cold-Storage Cooler",
+    "destination": "Miami, FL",
+    "deadline": 3,
+    "weight": 5.0,
+    "fragile": true,
+    "value": 1800.0,
+    "quantity": 1,
+    "priority": "HIGH",
+    "priority_confidence": 0.9515,
+    "lane": "FRAGILE",
+    "lane_confidence": 0.7744,
+    "needs_human_review": false,
+    "review_confidence": 0.5972999999999999,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Handling Lane 'FRAGILE' at 0.77 < 0.85 threshold"
+    ],
+    "min_confidence": 0.5972999999999999,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.9515,
+        "medium": 0.0218,
+        "low": 0.0267
+      },
+      "lane": {
+        "standard": 0.1479,
+        "fragile": 0.7744,
+        "high_value": 0.0778
+      },
+      "review_p_true": 0.4027
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-010",
+    "product_name": "Wireless Mechanical Keyboards",
+    "destination": "Portland, OR",
+    "deadline": 28,
+    "weight": 2.2,
+    "fragile": false,
+    "value": 160.0,
+    "quantity": 2,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8312,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9268,
+    "needs_human_review": false,
+    "review_confidence": 0.5416000000000001,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Priority 'MEDIUM' at 0.83 < 0.85 threshold"
+    ],
+    "min_confidence": 0.5416000000000001,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0544,
+        "medium": 0.8312,
+        "low": 0.1144
+      },
+      "lane": {
+        "standard": 0.9268,
+        "fragile": 0.0297,
+        "high_value": 0.0436
+      },
+      "review_p_true": 0.4584
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-011",
+    "product_name": "Vintage Vinyl Records",
+    "destination": "Nashville, TN",
+    "deadline": 18,
+    "weight": 1.8,
+    "fragile": true,
+    "value": 310.0,
+    "quantity": 4,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8473,
+    "lane": "STANDARD",
+    "lane_confidence": 0.5214,
+    "needs_human_review": false,
+    "review_confidence": 0.7492,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Priority 'MEDIUM' at 0.85 < 0.85 threshold",
+      "Low Confidence: Handling Lane 'STANDARD' at 0.52 < 0.85 threshold"
+    ],
+    "min_confidence": 0.5214,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0534,
+        "medium": 0.8473,
+        "low": 0.0993
+      },
+      "lane": {
+        "standard": 0.5214,
+        "fragile": 0.4258,
+        "high_value": 0.0528
+      },
+      "review_p_true": 0.2508
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-012",
+    "product_name": "Automotive Car Batteries",
+    "destination": "Atlanta, GA",
+    "deadline": 12,
+    "weight": 32.0,
+    "fragile": false,
+    "value": 380.0,
+    "quantity": 2,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8979,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9642,
+    "needs_human_review": false,
+    "review_confidence": 0.6517999999999999,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.6517999999999999,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0442,
+        "medium": 0.8979,
+        "low": 0.0579
+      },
+      "lane": {
+        "standard": 0.9642,
+        "fragile": 0.0159,
+        "high_value": 0.0199
+      },
+      "review_p_true": 0.3482
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-013",
+    "product_name": "Luxury Silk Scarves",
+    "destination": "Manhattan, NY",
+    "deadline": 8,
+    "weight": 0.4,
+    "fragile": false,
+    "value": 850.0,
+    "quantity": 5,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.9059,
+    "lane": "STANDARD",
+    "lane_confidence": 0.8965,
+    "needs_human_review": false,
+    "review_confidence": 0.6428,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.6428,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0283,
+        "medium": 0.9059,
+        "low": 0.0658
+      },
+      "lane": {
+        "standard": 0.8965,
+        "fragile": 0.0353,
+        "high_value": 0.0682
+      },
+      "review_p_true": 0.3572
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-014",
+    "product_name": "Bulk Garden Soil Bags",
+    "destination": "Raleigh, NC",
+    "deadline": 60,
+    "weight": 50.0,
+    "fragile": false,
+    "value": 35.0,
+    "quantity": 5,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8459,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9409,
+    "needs_human_review": false,
+    "review_confidence": 0.7013,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Priority 'MEDIUM' at 0.85 < 0.85 threshold"
+    ],
+    "min_confidence": 0.7013,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0555,
+        "medium": 0.8459,
+        "low": 0.0986
+      },
+      "lane": {
+        "standard": 0.9409,
+        "fragile": 0.0242,
+        "high_value": 0.035
+      },
+      "review_p_true": 0.2987
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-015",
+    "product_name": "Drone 4K Camera Gimbal",
+    "destination": "Phoenix, AZ",
+    "deadline": 7,
+    "weight": 1.1,
+    "fragile": true,
+    "value": 1150.0,
+    "quantity": 1,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8673,
+    "lane": "FRAGILE",
+    "lane_confidence": 0.7753,
+    "needs_human_review": false,
+    "review_confidence": 0.5973999999999999,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Handling Lane 'FRAGILE' at 0.78 < 0.85 threshold"
+    ],
+    "min_confidence": 0.5973999999999999,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0512,
+        "medium": 0.8673,
+        "low": 0.0815
+      },
+      "lane": {
+        "standard": 0.1871,
+        "fragile": 0.7753,
+        "high_value": 0.0377
+      },
+      "review_p_true": 0.4026
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-016",
+    "product_name": "Hardcover Programming Books",
+    "destination": "Salt Lake City, UT",
+    "deadline": 40,
+    "weight": 6.0,
+    "fragile": false,
+    "value": 180.0,
+    "quantity": 3,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8749,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9393,
+    "needs_human_review": false,
+    "review_confidence": 0.594,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.594,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.0469,
+        "medium": 0.8749,
+        "low": 0.0781
+      },
+      "lane": {
+        "standard": 0.9393,
+        "fragile": 0.0246,
+        "high_value": 0.0361
+      },
+      "review_p_true": 0.406
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-017",
+    "product_name": "Emergency Backup Generator",
+    "destination": "New Orleans, LA",
+    "deadline": 5,
+    "weight": 48.0,
+    "fragile": false,
+    "value": 2900.0,
+    "quantity": 1,
+    "priority": "HIGH",
+    "priority_confidence": 0.9722,
+    "lane": "HIGH_VALUE",
+    "lane_confidence": 0.9074,
+    "needs_human_review": true,
+    "review_confidence": 0.8236,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.82)"
+    ],
+    "min_confidence": 0.8236,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.9722,
+        "medium": 0.0158,
+        "low": 0.012
+      },
+      "lane": {
+        "standard": 0.0528,
+        "fragile": 0.0398,
+        "high_value": 0.9074
+      },
+      "review_p_true": 0.8236
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-018",
+    "product_name": "Fine Wine Wooden Crate",
+    "destination": "Napa Valley, CA",
+    "deadline": 14,
+    "weight": 9.5,
+    "fragile": true,
+    "value": 750.0,
+    "quantity": 1,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8523,
+    "lane": "FRAGILE",
+    "lane_confidence": 0.6307,
+    "needs_human_review": false,
+    "review_confidence": 0.6839,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Low Confidence: Handling Lane 'FRAGILE' at 0.63 < 0.85 threshold"
+    ],
+    "min_confidence": 0.6307,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.054,
+        "medium": 0.8523,
+        "low": 0.0938
+      },
+      "lane": {
+        "standard": 0.3206,
+        "fragile": 0.6307,
+        "high_value": 0.0487
+      },
+      "review_p_true": 0.3161
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-019",
+    "product_name": "Stainless Steel Kitchen Utensils",
+    "destination": "Dallas, TX",
+    "deadline": 30,
+    "weight": 3.4,
+    "fragile": false,
+    "value": 70.0,
+    "quantity": 2,
+    "priority": "MEDIUM",
+    "priority_confidence": 0.8633,
+    "lane": "STANDARD",
+    "lane_confidence": 0.9387,
+    "needs_human_review": false,
+    "review_confidence": 0.7294,
+    "gate_status": "AUTO_PROCESSED",
+    "escalation_reasons": [],
+    "min_confidence": 0.7294,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.041,
+        "medium": 0.8633,
+        "low": 0.0957
+      },
+      "lane": {
+        "standard": 0.9387,
+        "fragile": 0.0258,
+        "high_value": 0.0356
+      },
+      "review_p_true": 0.2706
+    },
+    "latency_ms": 18.5
+  },
+  {
+    "order_id": "ORD-020",
+    "product_name": "Optics Calibration Laser",
+    "destination": "Boulder, CO",
+    "deadline": 3,
+    "weight": 2.1,
+    "fragile": true,
+    "value": 6800.0,
+    "quantity": 1,
+    "priority": "HIGH",
+    "priority_confidence": 0.9754,
+    "lane": "HIGH_VALUE",
+    "lane_confidence": 0.9028,
+    "needs_human_review": true,
+    "review_confidence": 0.8554,
+    "gate_status": "HUMAN_REVIEW",
+    "escalation_reasons": [
+      "Policy Flag: Model flagged supervisor sign-off needed (Confidence: 0.86)"
+    ],
+    "min_confidence": 0.8554,
+    "raw_probabilities": {
+      "priority": {
+        "high": 0.9754,
+        "medium": 0.0145,
+        "low": 0.0101
+      },
+      "lane": {
+        "standard": 0.0447,
+        "fragile": 0.0526,
+        "high_value": 0.9028
+      },
+      "review_p_true": 0.8554
+    },
+    "latency_ms": 18.5
+  }
+]
