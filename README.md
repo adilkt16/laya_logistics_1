@@ -1,3 +1,13 @@
+---
+title: Comfy Cakes Warehouse Brain
+emoji: 🍰
+colorFrom: pink
+colorTo: red
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 🏭 Warehouse Brain (learn-laya)
 
 An intelligent, simulated warehouse fulfillment and routing system powered by **[Laya](https://huggingface.co/convaiinnovations/laya)**.

@@ -22,8 +22,7 @@ import warnings
 from typing import Dict, List, Optional
 from dataclasses import dataclass, field
 
-# Suppress Hugging Face network check warnings and keep environment offline/clean
-os.environ["HF_HUB_OFFLINE"] = "1"
+# Suppress unnecessary warnings
 warnings.filterwarnings("ignore")
 
 from laya import Router

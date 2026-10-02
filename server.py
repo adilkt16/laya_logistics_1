@@ -349,5 +349,7 @@ app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🎂 Starting Comfy Cakes Warehouse Factory on http://127.0.0.1:8000 ...")
-    uvicorn.run("server:app", host="127.0.0.1", port=8000, reload=False)
+    port = int(os.environ.get("PORT", 8000))
+    host = os.environ.get("HOST", "0.0.0.0")
+    print(f"\n🎂 Starting Comfy Cakes Warehouse Factory on http://{host}:{port} ...")
+    uvicorn.run("server:app", host=host, port=port, reload=False)
