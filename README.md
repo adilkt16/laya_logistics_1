@@ -1,5 +1,5 @@
 ---
-title: Comfy Cakes Warehouse Brain
+title: Cakes Warehouse
 emoji: 🍰
 colorFrom: pink
 colorTo: red
